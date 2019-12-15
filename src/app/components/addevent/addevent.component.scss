@@ -1,0 +1,32 @@
+.table-container {
+    height: 300px;
+    overflow: auto;
+  }
+  
+  table {
+      width: 100%;
+    }
+  
+    th.mat-sort-header-sorted {
+      color: black;
+    }
+  
+    .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+  
+
+    mat-toolbar
+    {
+        span {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .mat-column-select {
+        overflow: visible;
+      }
+
+  

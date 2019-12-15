@@ -1,0 +1,52 @@
+<mat-toolbar>
+        
+        <span>Events List</span>
+      </mat-toolbar> 
+    
+    <div class="table-container mat-elevation-z8">
+        
+    <table mat-table [dataSource]="eventDataSource" >
+
+      <!-- Organizer Column -->
+      <ng-container matColumnDef="organizer">
+        <th mat-header-cell *matHeaderCellDef> Organizer </th>
+        <td mat-cell *matCellDef="let element"> {{element.organizer.first}} {{element.organizer.last}}</td>
+      </ng-container>
+    
+      <!-- Company Column -->
+      <ng-container matColumnDef="company">
+        <th mat-header-cell *matHeaderCellDef> Company </th>
+        <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+      </ng-container>
+    
+      <!-- About Column -->
+      <ng-container matColumnDef="about">
+        <th mat-header-cell *matHeaderCellDef> About </th>
+        <td mat-cell *matCellDef="let element"> {{element.about}} </td>
+      </ng-container>
+    
+      <!-- Scheduled on Column -->
+      <ng-container matColumnDef="scheduled_at">
+        <th mat-header-cell *matHeaderCellDef> Scheduled on </th>
+        <td mat-cell *matCellDef="let element"> {{element.scheduled_at}} </td>
+      </ng-container>
+    
+      <!-- Duration Column -->
+      <ng-container matColumnDef="duration">
+        <th mat-header-cell *matHeaderCellDef> Duration </th>
+        <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+      </ng-container>
+    
+       <!-- Capacity Column -->
+       <ng-container matColumnDef="capacity">
+          <th mat-header-cell *matHeaderCellDef> Capacity </th>
+          <td mat-cell *matCellDef="let element"> {{element.capacity}} </td>
+        </ng-container>
+    
+     
+    
+      <tr mat-header-row *matHeaderRowDef="eventsColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: eventsColumns;" ></tr>
+      
+    </table>
+    </div>
